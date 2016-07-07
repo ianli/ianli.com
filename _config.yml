@@ -1,2 +1,8 @@
 # Build settings
 markdown: kramdown
+
+# Don't add these files to the site.
+exclude:
+- Gemfile
+- Gemfile.lock
+- run_jekyll.sh
