@@ -1,0 +1,56 @@
+// Bootstrap SASS grid only
+// https://github.com/twbs/bootstrap-sass/issues/651
+
+// Variables
+@import "variables";
+
+// Mixins
+@import "bootstrap/mixins/clearfix";
+@import "bootstrap/mixins/grid-framework";
+@import "bootstrap/mixins/grid";
+
+@import "bootstrap/grid";
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+  -webkit-box-sizing: $boxmodel;
+     -moz-box-sizing: $boxmodel;
+          box-sizing: $boxmodel;
+}
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  @include box-sizing(border-box);
+}
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+// There is no padding or margin in body.
+body {
+  margin: 0;
+  padding: 0;
+}
+
+//
+// Add XL grid
+//
+
+.container {
+  @media (min-width: $screen-xl-min) {
+    width: $container-xl;
+  }
+}
+
+// XL grid
+//
+// Columns, offsets, pushes, and pulls for extra large desktop device range.
+
+@media (min-width: $screen-xl-min) {
+  @include make-grid(lg);
+}
