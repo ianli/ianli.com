@@ -6,3 +6,6 @@ exclude:
 - Gemfile
 - Gemfile.lock
 - run_jekyll.sh
+
+collections:
+- projects

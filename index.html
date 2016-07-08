@@ -1,3 +1,6 @@
+---
+# Blank front matter, so that the file gets processed by Jekyll.
+---
 <!DOCTYPE>
 <html>
 <head>
@@ -53,6 +56,18 @@
       <p>
         I've always liked to make things since I was little. Growing up in the Philippines, I didn't have many toys, so I had to improvise by making them. A matchbox and cardboard turned into a robot, scrapwood into a boomerang, shampoo bottle into a hydroplane. The joy of making has remained with me as I've become older, albeit with different materials. Here are some samples of projects that I've worked on.
       </p>
+
+      {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
+      {% for project in projects_by_date %}
+        <h5>
+          {{ project.title }}
+        </h5>
+
+        <p>
+          {{ project.short }}
+        </p>
+      {% endfor %}
+
     </div>
   </div>
 
