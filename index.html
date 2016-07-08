@@ -60,7 +60,7 @@
       {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
       {% for project in projects_by_date %}
         <h5>
-          {{ project.title }}
+          <a href={{ project.url }}>{{ project.title }}</a>
         </h5>
 
         <p>
