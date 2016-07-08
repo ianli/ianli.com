@@ -7,5 +7,16 @@ exclude:
 - Gemfile.lock
 - run_jekyll.sh
 
+# Set collections
+# https://jekyllrb.com/docs/collections/
 collections:
-- projects
+  projects:
+    output: true
+
+# Set defaults for projects collection
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: projects
