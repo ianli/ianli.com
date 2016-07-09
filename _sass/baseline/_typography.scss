@@ -185,28 +185,6 @@ body {
 
   @include media-xs-up() {
     .space-xs {
-      height: 8px;
-    }
-
-    .space-sm {
-      height: 16px;
-    }
-
-    .space-md {
-      height: 24px;
-    }
-
-    .space-lg {
-      height: 36px;
-    }
-
-    .space-xl {
-      height: 48px;
-    }
-  }
-
-  @include media-md-up() {
-    .space-xs {
       height: 16px;
     }
 
@@ -224,6 +202,28 @@ body {
 
     .space-xl {
       height: 64px;
+    }
+  }
+
+  @include media-md-up() {
+    .space-xs {
+      height: 16px;
+    }
+
+    .space-sm {
+      height: 24px;
+    }
+
+    .space-md {
+      height: 32px;
+    }
+
+    .space-lg {
+      height: 56px;
+    }
+
+    .space-xl {
+      height: 80px;
     }
   }
 
