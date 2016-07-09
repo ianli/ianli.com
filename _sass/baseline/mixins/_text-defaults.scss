@@ -1,0 +1,52 @@
+@mixin text-default($size) {
+  $font-size: map-get(map-get($text-defaults, $size), 'font-size');
+  $line-height: map-get(map-get($text-defaults, $size), 'line-height');
+  $cap-height: map-get(map-get($text-defaults, $size), 'cap-height');
+  $margin-top: map-get(map-get($text-defaults, $size), 'margin-top');
+  $margin-bottom: map-get(map-get($text-defaults, $size), 'margin-bottom');
+  $letter-spacing: map-get(map-get($text-defaults, $size), 'letter-spacing');
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  font-size: $font-size;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin padding-for-text-default($size) {
+  $margin-bottom: map-get(map-get($text-defaults, $size), 'margin-bottom');
+
+  // Remove margin bottom 0, cuz we don't need it...
+  margin-bottom: 0;
+
+  // Instead create a padding
+  &::after {
+    content: '';
+    display: block;
+    // Set margin-top
+    margin-top: $margin-bottom;
+    height: 32px;
+    pointer-events: none;
+  }
+}
+
+@mixin text-default-with-padding($size) {
+  @include text-default($size);
+  @include padding-for-text-default($size);
+}
+
+@mixin top-padding-for-text($text-size, $padding-size) {
+  $margin-top: map-get(map-get($text-defaults, $text-size), 'margin-top');
+
+  // Set margin top to 0, cuz we don't need it...
+  margin-top: 0;
+
+  // Create the padding with a negative margin on it...
+  &::before {
+    content: '';
+    display: block;
+    // Setting margin-bottom of the padding
+    margin-bottom: $margin-top;
+    height: $padding-size;
+    pointer-events: none;
+  }
+}

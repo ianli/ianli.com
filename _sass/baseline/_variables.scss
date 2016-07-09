@@ -1,0 +1,131 @@
+$font-family-sans-serif:     "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:          "Aleo", Georgia, "Times New Roman", Times, serif !default;
+
+$font-family-base:           $font-family-sans-serif !default;
+$font-size-base:             16px !default;
+$line-height-base:           24px !default;
+
+$text-color:                 rgba(#000, .87);
+
+//** Global textual link color.
+$link-color:                 #0288D1 !default; // Material Light Blue 700
+//** Link hover color set via `darken()` function.
+$link-hover-color:           #01579B !default; // Material Light Blue 900
+//** Link hover decoration.
+$link-hover-decoration:      underline !default;
+
+$text-defaults: (
+  12: (
+    margin-top: -6px,
+    margin-bottom: -6px,
+    font-size: 12px,
+    cap-height: 8px,
+    line-height: 20px, // 1.666...
+    letter-spacing: 0,
+  ),
+  14: (
+    margin-top: -5px,
+    margin-bottom: -7px,
+    font-size: 14px,
+    cap-height: 12px,
+    // line-height: 20px, // 1.429...
+    line-height: 24px, // 1.714...
+    letter-spacing: 0,
+  ),
+  16: (
+    margin-top: -6px,
+    margin-bottom: -6px,
+    font-size: 16px,
+    cap-height: 16px,
+    line-height: 24px, // 1.5
+    letter-spacing: 0,
+  ),
+  18: (
+    margin-top: -3px,
+    margin-bottom: -5px,
+    font-size: 18px,
+    cap-height: 16px,
+    line-height: 24px, // 1.333...
+    letter-spacing: 0,
+  ),
+  20: (
+    margin-top: -6px,
+    margin-bottom: -6px,
+    font-size: 20px,
+    cap-height: 16px,
+    line-height: 28px, // 1.4
+    letter-spacing: -.01em,
+  ),
+  24: (
+    margin-top: -5px,
+    margin-bottom: -7px,
+    font-size: 24px,
+    cap-height: 20px,
+    line-height: 32px, // 1.333...
+    letter-spacing: -.01em,
+  ),
+  28: (
+    margin-top: -9px,
+    margin-bottom: -7px,
+    font-size: 28px,
+    cap-height: 20px,
+    line-height: 36px, // 1.285
+    letter-spacing: -.01em,
+  ),
+  32: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 32px,
+    cap-height: 24px,
+    line-height: 40px, // 1.25
+    letter-spacing: -.02em,
+  ),
+  36: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 36px,
+    cap-height: 28px,
+    line-height: 44px, // 1.22
+    letter-spacing: -.02em,
+  ),
+  40: (
+    margin-top: -5px,
+    margin-bottom: -7px,
+    font-size: 40px,
+    cap-height: 32px,
+    line-height: 44px, // 1.1
+    letter-spacing: -.02em,
+  ),
+  44: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 44px,
+    cap-height: 32px,
+    line-height: 48px, // 1.09
+    letter-spacing: -.02em,
+  ),
+  48: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 48px,
+    cap-height: 36px,
+    line-height: 52px, // 1.083...
+    letter-spacing: -.02em,
+  ),
+  56: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 56px,
+    cap-height: 36px,
+    line-height: 56px, // 1
+    letter-spacing: -.02em,
+  ),
+  64: (
+    margin-top: -8px,
+    margin-bottom: -8px,
+    font-size: 64px,
+    cap-height: 36px,
+    line-height: 64px, // 1
+    letter-spacing: -.02em,
+  )
+);

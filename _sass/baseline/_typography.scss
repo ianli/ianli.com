@@ -1,0 +1,326 @@
+@import "bootstrap-grid/mixins/media-query";
+
+@import "mixins/font-smoothing";
+@import "mixins/text-defaults";
+@import "variables";
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  @include font-smoothing(antialiased);
+
+  // Kerning
+  // http://www.elliotjaystocks.com/blog/kerning/
+
+  text-rendering: optimizeLegibility;
+
+  -webkit-font-feature-settings: "kern";
+     -moz-font-feature-settings: "kern";
+     -moz-font-feature-settings: "kern=1";
+      -ms-font-feature-settings: "kern";
+       -o-font-feature-settings: "kern";
+          font-feature-settings: "kern";
+
+  font-kerning: normal;
+}
+
+.baseline {
+
+  // Settings for all content text.
+  h1, h2, h3, h4, h5, h6, p,
+  figure, figcaption {
+    position: relative;
+
+    // All fonts default with no padding nor margins.
+    margin: 0;
+    padding: 0;
+  }
+
+  // Links
+
+  a {
+    display: inline-block;
+    color: $link-color;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+  }
+
+  $text-sizes: 12, 14, 16, 18, 20, 24, 28, 32, 36, 40, 44, 48, 56, 64;
+  @each $size in $text-sizes {
+    .text-#{$size} {
+      @include text-default($size);
+    }
+  }
+
+  //        Print  Desktop   Tablet    Phone
+  // H1     36     48        40        32
+  // H2     24     36        32        26
+  // H3     18     28        24        22
+  // H4     14     18        18        18   
+  // P      12     16        16        16
+  // BQ     24     24        24        20
+
+  @include media-xs-up() {
+    h1, .text-h1 {
+      @include text-default(32);  // 2 rem
+    }
+    h2, .text-h2 {
+      @include text-default(24);  // 1.5 rem
+    }
+    h3, .text-h3 {
+      @include text-default(20);  // 1.25 rem
+    }
+    h4, .text-h4 {
+      @include text-default(18);  // 1.125 rem
+    }
+    h5, .text-h5 {
+      @include text-default(16);  // 1 rem
+    }
+    .text-h6 {
+      @include text-default(14);  // 0.875 rem
+    }
+
+    p, .text-p {
+      @include text-default(16);  // 1 rem
+
+      &.large {
+        @include text-default(18);
+      }
+
+      &.larger {
+        @include text-default(24);
+      }
+
+      &.small {
+        @include text-default(14);
+      }
+    }
+
+    figcaption {
+      @include text-default(14);
+    }
+  }
+
+  @include media-md-up() {
+    h1, .text-h1 {
+      @include text-default(40);  // 2.5 rem
+    }
+    h2, .text-h2 {
+      @include text-default(32);  // 2 rem
+    }
+    h3, .text-h3 {
+      @include text-default(24);  // 1.5 rem
+    }
+  }
+
+  // Medium and large screens have the same size text.
+  @include media-lg-up() {
+    h1, .text-h1 {
+      @include text-default(48);  // 3 rem
+    }
+    h2, .text-h2 {
+      @include text-default(36);  // 2.25 rem
+    }
+  }
+
+  //
+  // Text spacing
+  // We use horizontal space.
+  //
+
+  @mixin hr-space($height) {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    pointer-events: none !important;
+    height: $height;
+  }
+
+  %hr-space {
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    pointer-events: none !important;
+  }
+
+  // Variable space
+  .space-var {
+    @extend %hr-space;
+  }
+
+  // 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48
+  @for $i from 1 through 12 {
+    $j: $i * 4;
+    .space-#{$j} {
+      @extend %hr-space;
+      height: #{$j}px;
+    }
+  }
+
+  // 64, 80, 96, 112, 128, 144, 160, 176, 192, 208, 224, 240
+  @for $x from 7 through 30 {
+    $y: $x * 8;
+    .space-#{$y} {
+      @extend %hr-space;
+      height: #{$y}px;
+    }
+  }
+
+  $space-sizes: 'xs', 'sm', 'md', 'lg', 'xl';
+  @each $size in $space-sizes {
+    .space-#{$size} {
+      @extend %hr-space;
+    }
+  }
+
+  @include media-xs-up() {
+    .space-xs {
+      height: 8px;
+    }
+
+    .space-sm {
+      height: 16px;
+    }
+
+    .space-md {
+      height: 24px;
+    }
+
+    .space-lg {
+      height: 36px;
+    }
+
+    .space-xl {
+      height: 48px;
+    }
+  }
+
+  @include media-md-up() {
+    .space-xs {
+      height: 16px;
+    }
+
+    .space-sm {
+      height: 24px;
+    }
+
+    .space-md {
+      height: 32px;
+    }
+
+    .space-lg {
+      height: 48px;
+    }
+
+    .space-xl {
+      height: 64px;
+    }
+  }
+
+  @include media-lg-up() {
+    .space-xs {
+      height: 16px;
+    }
+
+    .space-sm {
+      height: 24px;
+    }
+
+    .space-md {
+      height: 32px;
+    }
+
+    .space-lg {
+      height: 64px;
+    }
+
+    .space-xl {
+      height: 96px;
+    }
+  }
+
+  // Spacing between a heading and a subsequent paragraph.
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p + p {
+    @include media-xs-up() {
+      @include top-padding-for-text(16, 28px);
+    }
+
+    @include media-md-up() {
+      @include top-padding-for-text(16, 32px);
+    }
+
+    @include media-lg-up() {
+      @include top-padding-for-text(16, 32px);
+    }
+  }
+
+  // Spacing between a paragraph and a subsequent paragraph.
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+    @include media-xs-up() {
+      @include top-padding-for-text(16, 28px);
+    }
+
+    @include media-md-up() {
+      @include top-padding-for-text(16, 32px);
+    }
+
+    @include media-lg-up() {
+      @include top-padding-for-text(16, 32px);
+    }
+  }
+
+  //
+  // Text alignment
+  //
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-left {
+    text-align: left;
+  }
+
+  .align-right {
+    text-align: right;
+  }
+
+  //
+  // Style
+  //
+
+  b, strong {
+    font-weight: bold;
+  }
+
+  i, em {
+    font-style: italic;
+  }
+
+  //
+  // Colors
+  //
+
+  .color-b1 {
+    color: rgba(0, 0, 0, .87);
+  }
+
+  .color-b2 {
+    color: rgba(0, 0, 0, .54);
+  }
+
+  .color-b3 {
+    color: rgba(0, 0, 0, .38);
+  }
+
+}

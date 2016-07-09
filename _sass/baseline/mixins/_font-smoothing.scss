@@ -1,0 +1,6 @@
+
+@mixin font-smoothing($smoothing) {
+  -webkit-font-smoothing: $smoothing;
+   -apple-font-smoothing: $smoothing;
+          font-smoothing: $smoothing;
+}
