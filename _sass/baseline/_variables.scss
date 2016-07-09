@@ -24,12 +24,14 @@ $text-defaults: (
     letter-spacing: 0,
   ),
   14: (
-    margin-top: -5px,
-    margin-bottom: -7px,
+    margin-top: -3px,
+    margin-bottom: -5px,
     font-size: 14px,
     cap-height: 12px,
-    // line-height: 20px, // 1.429...
-    line-height: 24px, // 1.714...
+    line-height: 20px, // 1.429...
+    // margin-top: -5px,
+    // margin-bottom: -7px,
+    // line-height: 24px, // 1.714...
     letter-spacing: 0,
   ),
   16: (
