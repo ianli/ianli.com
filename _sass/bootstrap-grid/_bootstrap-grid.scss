@@ -4,12 +4,16 @@
 // Variables
 @import "variables";
 
-// Mixins
+// Bootstrap mixins
 @import "bootstrap/mixins/clearfix";
 @import "bootstrap/mixins/grid-framework";
 @import "bootstrap/mixins/grid";
 
+// Bootstrap grid
 @import "bootstrap/grid";
+
+// Custom mixins
+@import "mixins/media-query";
 
 // Box sizing
 @mixin box-sizing($boxmodel) {
@@ -53,4 +57,68 @@ body {
 
 @media (min-width: $screen-xl-min) {
   @include make-grid(lg);
+}
+
+// Hidden down
+
+.hidden-xs-down {
+  @include media-xs-down() {
+    display: none !important;
+  }
+}
+
+.hidden-sm-down {
+  @include media-sm-down() {
+    display: none !important;
+  }
+}
+
+.hidden-md-down {
+  @include media-md-down() {
+    display: none !important;
+  }
+}
+
+.hidden-lg-down {
+  @include media-lg-down() {
+    display: none !important;
+  }
+}
+
+.hidden-xl-down {
+  @include media-xl-down() {
+    display: none !important;
+  }
+}
+
+// Hidden up
+
+.hidden-xs-up {
+  @include media-xs-up() {
+    display: none !important;
+  }
+}
+
+.hidden-sm-up {
+  @include media-sm-up() {
+    display: none !important;
+  }
+}
+
+.hidden-md-up {
+  @include media-md-up() {
+    display: none !important;
+  }
+}
+
+.hidden-lg-up {
+  @include media-lg-up() {
+    display: none !important;
+  }
+}
+
+.hidden-xl-up {
+  @include media-xl-up() {
+    display: none !important;
+  }
 }
