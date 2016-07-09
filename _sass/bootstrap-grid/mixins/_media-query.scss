@@ -1,0 +1,61 @@
+// Mixins for media queries
+
+// Size and up
+
+@mixin media-xs-up() {
+  @content;
+}
+
+@mixin media-sm-up() {
+  @media (min-width: $screen-sm-min) {
+    @content;
+  }
+}
+
+@mixin media-md-up() {
+  @media (min-width: $screen-md-min) {
+    @content;
+  }
+}
+
+@mixin media-lg-up() {
+  @media (min-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin media-xl-up() {
+  @media (min-width: $screen-xl-min) {
+    @content;
+  }
+}
+
+// Size and down
+
+@mixin media-xs-down() {
+  @media (max-width: $screen-xs-max) {
+    @content;
+  }
+}
+
+@mixin media-sm-down() {
+  @media (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin media-md-down() {
+  @media (max-width: $screen-md-max) {
+    @content;
+  }
+}
+
+@mixin media-lg-down() {
+  @media (max-width: $screen-lg-max) {
+    @content;
+  }
+}
+
+@mixin media-xl-down() {
+  @content;
+}
