@@ -1,0 +1,17 @@
+.nav-header {
+  padding-top: 32px;
+  height: 192px;
+
+  h1 {
+    display: inline-block;
+
+    @include text-default(24);
+
+    border-bottom: 4px solid #03A9F4;
+
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
