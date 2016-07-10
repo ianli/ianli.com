@@ -40,3 +40,18 @@
     @include top-padding-for-text(20, 16px);
   }
 }
+
+//
+// Image
+//
+
+.img-responsive {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.img-shadow {
+  box-shadow: 0 0 3px rgba(0, 0, 0, .2),
+      0 3px 15px rgba(0, 0, 0, .10);
+}
