@@ -59,13 +59,15 @@
 
       {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
       {% for project in projects_by_date %}
-        <h5>
-          <a href={{ project.url }}>{{ project.title }}</a>
-        </h5>
+        {% if project.content != "" %}
+          <h5>
+            <a href={{ project.url }}>{{ project.title }}</a>
+          </h5>
 
-        <p>
-          {{ project.short }}
-        </p>
+          <p>
+            {{ project.short }}
+          </p>
+        {% endif %}
       {% endfor %}
 
     </div>
