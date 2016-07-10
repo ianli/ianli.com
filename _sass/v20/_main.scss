@@ -15,3 +15,20 @@
     }
   }
 }
+
+.content-nav {
+  padding-left: 24px;
+  border-left: 8px solid #2196F3;
+
+  &:before {
+    content: 'Contents';
+    display: block;
+    @include text-default(16);
+    color: #999;
+  }
+
+  a[href] {
+    @include text-default(20);
+    @include top-padding-for-text(20, 16px);
+  }
+}
