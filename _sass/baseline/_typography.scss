@@ -30,6 +30,7 @@ body {
 
   // Settings for all content text.
   h1, h2, h3, h4, h5, h6, p,
+  ul, ol,
   figure, figcaption {
     position: relative;
 
@@ -38,10 +39,13 @@ body {
     padding: 0;
   }
 
+  ul, ol {
+    padding-left: 32px;
+  }
+
   // Links
 
   a {
-    display: inline-block;
     color: $link-color;
     text-decoration: none;
     cursor: pointer;
@@ -102,6 +106,10 @@ body {
       &.small {
         @include text-default(14);
       }
+    }
+
+    ul, ol {
+      @include text-default(16);
     }
   }
 
@@ -246,7 +254,9 @@ body {
   }
 
   // Spacing between a heading and a subsequent paragraph.
-  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p, p + p {
+  h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
+  ul + p, ol + p,
+  p + p {
     @include media-xs-up() {
       @include top-padding-for-text(16, 28px);
     }
@@ -261,7 +271,8 @@ body {
   }
 
   // Spacing between a paragraph and a subsequent paragraph.
-  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6,
+  p + ul, p + ol {
     @include media-xs-up() {
       @include top-padding-for-text(16, 28px);
     }
