@@ -41,21 +41,32 @@ layout: default
   </div>
 </div>
 
-<hr class="space-md">
-
 <div class="row">
   <div class="col-xs-12">
 
     {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
     {% for project in projects_by_date %}
       {% if project.content != "" %}
-        <h5>
-          <a href={{ project.url }}>{{ project.title }}</a>
-        </h5>
+        <hr class="space-md">
 
-        <p>
-          {{ project.short }}
-        </p>
+        <a href="{{ project.url }}"
+            class="project-link">
+          <h5>
+            {{ project.title }}
+          </h5>
+
+          <hr class="space-xs">
+
+          {% if project.badge %}
+            <img
+                class="project-img"
+                src="/images/projects/{{ project.badge }}">
+          {% endif %}
+
+          <p>
+            {{ project.short }}
+          </p>
+        </a>
       {% endif %}
     {% endfor %}
 

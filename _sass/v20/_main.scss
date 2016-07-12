@@ -28,7 +28,7 @@
 
 .content-nav {
   padding-left: 24px;
-  border-left: 8px solid #2196F3;
+  border-left: 6px solid #2196F3;
 
   &:before {
     content: 'Contents';
@@ -38,8 +38,9 @@
   }
 
   a[href] {
+    display: block;
     @include text-default(20);
-    @include top-padding-for-text(20, 16px);
+    @include top-padding-for-text(20, 24px);
   }
 }
 
@@ -64,4 +65,23 @@
 
 .clearfix {
   @include clearfix();
+}
+
+//
+// Project link
+//
+
+a.project-link,
+a.project-link:hover {
+  color: inherit;
+  text-decoration: none;
+
+  @include clearfix();
+}
+
+.project-img {
+  float: left;
+  margin-right: 16px;
+  width: 80px;
+  height: 80px;
 }
