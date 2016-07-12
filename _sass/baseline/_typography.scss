@@ -118,15 +118,15 @@ body {
       @include text-default(40);  // 2.5 rem
     }
     h2, .text-h2 {
-      @include text-default(32);  // 2 rem
+      @include text-default(28);  // 1.75 rem
     }
     h3, .text-h3 {
-      @include text-default(24);  // 1.5 rem
+      @include text-default(20);  // 1.25 rem
     }
 
     p, .text-p {
       &.larger {
-        @include text-default(24);  // Same as h3
+        @include text-default(20);  // Same as h3
       }
     }
   }
@@ -138,6 +138,15 @@ body {
     }
     h2, .text-h2 {
       @include text-default(36);  // 2.25 rem
+    }
+    h3, .text-h3 {
+      @include text-default(24);  // 1.5 rem
+    }
+
+    p, .text-p {
+      &.larger {
+        @include text-default(24);  // Same as h3
+      }
     }
   }
 

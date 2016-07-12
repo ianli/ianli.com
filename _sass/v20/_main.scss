@@ -1,10 +1,68 @@
 //
+// Home background
+//
+
+.home-page {
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @include media-sm-up() {
+    background-image: url(/images/home/bg_sm.png);
+  }
+
+  @include media-md-up() {
+    background-image: url(/images/home/bg_md.png);
+  }
+
+  @include media-lg-up() {
+    background-image: url(/images/home/bg_lg.png);
+
+    h1 {
+      @include text-default(64);
+    }
+  }
+
+  @include media-xl-up() {
+    background-image: url(/images/home/bg_xl.png);
+  }
+}
+
+.home-banner-img {
+  float: right;
+  margin-top: -198px;
+  margin-right: -16px;
+  margin-left: 12px;
+  width: 148px;
+  height: 440px;
+  background-image: url(/images/home/bg_xs.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  shape-outside: ellipse(74px 220px at 50% 50%);
+
+  @include media-sm-up() {
+    display: none;
+  }
+}
+
+
+//
 // Header nav
 //
 
 .header-nav {
   padding-top: 32px;
-  height: 192px;
+
+  @include media-xs-up() {
+    height: 132px;
+  }
+
+  @include media-md-up() {
+    height: 168px;
+  }
+
+  @include media-lg-up() {
+    height: 192px;
+  }
 
   h1 {
     display: inline-block;
@@ -27,7 +85,6 @@
 //
 
 .content-nav {
-  float: left;
   padding-left: 24px;
   border-left: 6px solid #2196F3;
 
@@ -85,4 +142,5 @@ a.project-link:hover {
   margin-right: 16px;
   width: 80px;
   height: 80px;
+  border-radius: 2px;
 }

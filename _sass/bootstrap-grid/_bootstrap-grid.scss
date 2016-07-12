@@ -56,7 +56,7 @@ body {
 // Columns, offsets, pushes, and pulls for extra large desktop device range.
 
 @media (min-width: $screen-xl-min) {
-  @include make-grid(lg);
+  @include make-grid(xl);
 }
 
 // Hidden down

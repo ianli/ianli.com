@@ -12,7 +12,7 @@ $link-color:                 #0288D1 !default; // Material Light Blue 700
 //** Link hover color set via `darken()` function.
 $link-hover-color:           #01579B !default; // Material Light Blue 900
 //** Link hover decoration.
-$link-hover-decoration:      underline !default;
+$link-hover-decoration:      none !default;
 
 $text-defaults: (
   12: (
