@@ -93,18 +93,18 @@ body {
     }
 
     p, .text-p {
-      @include text-default(16);  // 1 rem
+      @include text-default(16);    // Same as h5
 
       &.large {
-        @include text-default(18);
+        @include text-default(18);  // Same as h4
       }
 
       &.larger {
-        @include text-default(24);
+        @include text-default(20);  // Same as h3
       }
 
       &.small {
-        @include text-default(14);
+        @include text-default(14);  // Same as h6
       }
     }
 
@@ -122,6 +122,12 @@ body {
     }
     h3, .text-h3 {
       @include text-default(24);  // 1.5 rem
+    }
+
+    p, .text-p {
+      &.larger {
+        @include text-default(24);  // Same as h3
+      }
     }
   }
 
