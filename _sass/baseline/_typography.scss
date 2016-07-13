@@ -271,9 +271,10 @@ body {
   // Spacing between a heading and a subsequent paragraph.
   h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p,
   ul + p, ol + p,
+  p + ul, p + ol,
   p + p {
     @include media-xs-up() {
-      @include top-padding-for-text(16, 28px);
+      @include top-padding-for-text(16, 32px);
     }
 
     @include media-md-up() {
@@ -286,18 +287,17 @@ body {
   }
 
   // Spacing between a paragraph and a subsequent paragraph.
-  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6,
-  p + ul, p + ol {
+  p + h1, p + h2, p + h3, p + h4, p + h5, p + h6 {
     @include media-xs-up() {
-      @include top-padding-for-text(16, 28px);
+      @include top-padding-for-text(16, 48px);
     }
 
     @include media-md-up() {
-      @include top-padding-for-text(16, 32px);
+      @include top-padding-for-text(16, 56px);
     }
 
     @include media-lg-up() {
-      @include top-padding-for-text(16, 32px);
+      @include top-padding-for-text(16, 64px);
     }
   }
 
