@@ -1,3 +1,5 @@
+@import "mixins/img-retina";
+
 //
 // Home background
 //
@@ -7,15 +9,24 @@
   background-repeat: no-repeat;
 
   @include media-sm-up() {
-    background-image: url(/images/home/bg_sm.png);
+    @include img-retina(
+        '/images/home/bg_sm.png',
+        '/images/home/bg_sm.2x.jpg',
+        680px, 480px);
   }
 
   @include media-md-up() {
-    background-image: url(/images/home/bg_md.png);
+    @include img-retina(
+        '/images/home/bg_md.png',
+        '/images/home/bg_md.2x.jpg',
+        820px, 600px);
   }
 
   @include media-lg-up() {
-    background-image: url(/images/home/bg_lg.png);
+    @include img-retina(
+        '/images/home/bg_lg.png',
+        '/images/home/bg_lg.2x.jpg',
+        1024px, 720px);
 
     h1 {
       @include text-default(64);
@@ -23,7 +34,10 @@
   }
 
   @include media-xl-up() {
-    background-image: url(/images/home/bg_xl.png);
+    @include img-retina(
+        '/images/home/bg_xl.png',
+        '/images/home/bg_xl.2x.jpg',
+        1280px, 960px);
   }
 }
 
@@ -34,7 +48,6 @@
   margin-left: 12px;
   width: 148px;
   height: 440px;
-  background-image: url(/images/home/bg_xs.png);
   background-position: top left;
   background-repeat: no-repeat;
   shape-outside: ellipse(74px 220px at 50% 50%);
@@ -42,6 +55,11 @@
   @include media-sm-up() {
     display: none;
   }
+
+  @include img-retina(
+      '/images/home/bg_xs.png',
+      '/images/home/bg_xs.2x.jpg',
+      240px, 440px);
 }
 
 
