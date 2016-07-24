@@ -64,47 +64,39 @@ body {
     }
   }
 
-  //        Print  Desktop   Tablet    Phone
-  // H1     36     48        40        32
-  // H2     24     36        32        26
-  // H3     18     28        24        22
-  // H4     14     18        18        18   
-  // P      12     16        16        16
-  // BQ     24     24        24        20
-
   @include media-xs-up() {
     h1, .text-h1 {
-      @include text-default(32);  // 2 rem
+      @include text-default($bl-h1-xs);
     }
     h2, .text-h2 {
-      @include text-default(24);  // 1.5 rem
+      @include text-default($bl-h2-xs);
     }
     h3, .text-h3 {
-      @include text-default(20);  // 1.25 rem
+      @include text-default($bl-h3-xs);
     }
     h4, .text-h4 {
-      @include text-default(18);  // 1.125 rem
+      @include text-default($bl-h4-xs);
     }
     h5, .text-h5 {
-      @include text-default(16);  // 1 rem
+      @include text-default($bl-h5-xs);
     }
     .text-h6 {
-      @include text-default(14);  // 0.875 rem
+      @include text-default($bl-h6-xs);
     }
 
     p, .text-p {
-      @include text-default(16);    // Same as h5
+      @include text-default($bl-h5-xs);
 
       &.large {
-        @include text-default(18);  // Same as h4
+        @include text-default($bl-h4-xs);
       }
 
       &.larger {
-        @include text-default(20);  // Same as h3
+        @include text-default($bl-h3-xs);
       }
 
       &.small {
-        @include text-default(14);  // Same as h6
+        @include text-default($bl-h6-xs);
       }
     }
 
@@ -115,18 +107,18 @@ body {
 
   @include media-md-up() {
     h1, .text-h1 {
-      @include text-default(40);  // 2.5 rem
+      @include text-default($bl-h1-md);
     }
     h2, .text-h2 {
-      @include text-default(28);  // 1.75 rem
+      @include text-default($bl-h2-md);
     }
     h3, .text-h3 {
-      @include text-default(20);  // 1.25 rem
+      @include text-default($bl-h3-md);
     }
 
     p, .text-p {
       &.larger {
-        @include text-default(20);  // Same as h3
+        @include text-default($bl-h3-md);
       }
     }
   }
@@ -134,18 +126,18 @@ body {
   // Medium and large screens have the same size text.
   @include media-lg-up() {
     h1, .text-h1 {
-      @include text-default(48);  // 3 rem
+      @include text-default($bl-h1-lg);
     }
     h2, .text-h2 {
-      @include text-default(36);  // 2.25 rem
+      @include text-default($bl-h2-lg);
     }
     h3, .text-h3 {
-      @include text-default(24);  // 1.5 rem
+      @include text-default($bl-h3-lg);
     }
 
     p, .text-p {
       &.larger {
-        @include text-default(24);  // Same as h3
+        @include text-default($bl-h3-lg);
       }
     }
   }

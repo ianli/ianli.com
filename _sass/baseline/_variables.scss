@@ -131,3 +131,32 @@ $text-defaults: (
     letter-spacing: -.02em,
   )
 );
+
+//        Print  Desktop   Tablet    Phone
+// H1     36     48        40        32
+// H2     24     36        32        26
+// H3     18     28        24        22
+// H4     14     18        18        18
+// P      12     16        16        16
+// BQ     24     24        24        20
+
+$bl-h1-xs: 32; // 2 rem
+$bl-h2-xs: 24; // 1.5 rem
+$bl-h3-xs: 20; // 1.25 rem
+$bl-h4-xs: 18; // 1.125 rem
+$bl-h5-xs: 16; // 1 rem
+$bl-h6-xs: 14; // 0.875 rem
+
+$bl-h1-md: 40; // 2.5 rem
+$bl-h2-md: 28; // 1.75 rem
+$bl-h3-md: $bl-h3-xs;
+$bl-h4-md: $bl-h4-xs;
+$bl-h5-md: $bl-h5-xs;
+$bl-h6-md: $bl-h6-xs;
+
+$bl-h1-lg: 48; // 3 rem
+$bl-h2-lg: 36; // 2.25 rem
+$bl-h3-lg: 24; // 1.5 rem
+$bl-h4-lg: $bl-h4-xs;
+$bl-h5-lg: $bl-h5-xs;
+$bl-h6-lg: $bl-h6-xs;
