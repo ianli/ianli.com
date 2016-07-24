@@ -162,3 +162,23 @@ a.project-link:hover {
   height: 80px;
   border-radius: 2px;
 }
+
+//
+// Next and previous item
+//
+.previous-item,
+.next-item {
+  color: rgba(0, 0, 0, .33);
+
+  a {
+    display: block;
+  }
+}
+
+.previous-item {
+  text-align: left;
+}
+
+.next-item {
+  text-align: right;
+}

@@ -34,5 +34,45 @@
 
   <hr class="space-xl">
 
+  {% comment %}
+    Order the projects by date in descending order.
+  {% endcomment %}
+  {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
+  {% for project in projects_by_date %}
+    {% if project.path == page.path %}
+      {% unless forloop.first %}
+        {% assign previous_project = previous %}
+      {% endunless %}
+      {% unless forloop.last %}
+        {% assign next_project = projects_by_date[forloop.index] %}
+      {% endunless %}
+    {% endif %}
+
+    {% assign previous = project %}
+  {% endfor %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-6 previous-item">
+        {% if previous_project %}
+          <a href="{{ previous_project.url }}">
+            <i class="material-icons">arrow_back</i><br>
+            {{ previous_project.title }}
+          </a>
+        {% endif %}
+      </div>
+      <div class="col-xs-6 next-item">
+        {% if next_project %}
+          <a href="{{ next_project.url }}">
+            <i class="material-icons">arrow_forward</i><br>
+            {{ next_project.title }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+  <hr class="space-xl">
+
 </body>
 </html>
