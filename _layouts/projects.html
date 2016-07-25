@@ -59,6 +59,8 @@
             <i class="material-icons">arrow_back</i><br>
             {{ previous_project.title }}
           </a>
+        {% else %}
+          &nbsp;
         {% endif %}
       </div>
       <div class="col-xs-6 next-item">
@@ -67,6 +69,8 @@
             <i class="material-icons">arrow_forward</i><br>
             {{ next_project.title }}
           </a>
+        {% else %}
+          &nbsp;
         {% endif %}
       </div>
     </div>

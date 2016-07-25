@@ -173,6 +173,18 @@ a.project-link:hover {
   a {
     display: block;
   }
+
+  @include media-xs-up() {
+    @include text-default($bl-h3-xs);
+  }
+
+  @include media-md-up() {
+    @include text-default($bl-h3-md);
+  }
+
+  @include media-lg-up() {
+    @include text-default($bl-h3-lg);
+  }
 }
 
 .previous-item {
