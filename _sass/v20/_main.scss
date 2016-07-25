@@ -194,3 +194,22 @@ a.project-link:hover {
 .next-item {
   text-align: right;
 }
+
+//
+// Logo name
+//
+.logo-name {
+  display: inline-block;
+  position: relative;
+  color: $text-color !important;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10%;
+    height: 10%;
+    background-color: #03a9f4;
+  }
+}
