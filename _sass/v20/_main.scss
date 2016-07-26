@@ -185,6 +185,14 @@ a.project-link:hover {
   @include media-lg-up() {
     @include text-default($bl-h3-lg);
   }
+
+  .separator {
+    display: inline-block;
+    background-color: #03a9f4;
+    margin-bottom: 4px;
+    width: 48px;
+    height: 4px;
+  }
 }
 
 .previous-item {
@@ -193,6 +201,10 @@ a.project-link:hover {
 
 .next-item {
   text-align: right;
+
+  .separator {
+    right: 0;
+  }
 }
 
 //
