@@ -20,3 +20,6 @@ defaults:
       type: projects
     values:
       layout: projects
+
+gems:
+  - jekyll-redirect-from
