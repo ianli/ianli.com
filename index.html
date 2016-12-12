@@ -55,17 +55,18 @@ layout: default
 
         <a href="{{ project.url }}"
             class="project-link">
-          <h5>
-            {{ project.title }}
-          </h5>
-
-          <hr class="space-xs">
 
           {% if project.badge %}
             <img
                 class="project-img"
                 src="/images/projects/{{ project.badge }}">
           {% endif %}
+
+          <h5>
+            {{ project.title }}
+          </h5>
+
+          <hr class="space-xs">
 
           <p>
             {{ project.short }}
