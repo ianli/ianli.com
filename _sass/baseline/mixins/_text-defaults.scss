@@ -12,28 +12,6 @@
   letter-spacing: $letter-spacing;
 }
 
-// @mixin padding-for-text-default($size) {
-//   $margin-bottom: map-get(map-get($text-defaults, $size), 'margin-bottom');
-//
-//   // Remove margin bottom 0, cuz we don't need it...
-//   margin-bottom: 0;
-//
-//   // Instead create a padding
-//   &::after {
-//     content: '';
-//     display: block;
-//     // Set margin-top
-//     margin-top: $margin-bottom;
-//     height: 32px;
-//     pointer-events: none;
-//   }
-// }
-//
-// @mixin text-default-with-padding($size) {
-//   @include text-default($size);
-//   @include padding-for-text-default($size);
-// }
-
 @mixin top-padding-for-text($text-size, $padding-size) {
   $margin-top: map-get(map-get($text-defaults, $text-size), 'margin-top');
 
