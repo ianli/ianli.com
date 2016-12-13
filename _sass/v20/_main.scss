@@ -1,4 +1,14 @@
+// Normalize
+@import '../bootstrap/normalize';
+
+// Bootstrap grid
+@import '../bootstrap-grid/bootstrap-grid';
+
+// Baseline typography
+@import '../baseline/typography';
+
 @import "mixins/img-retina";
+
 
 //
 // Home background
@@ -231,6 +241,10 @@ a.project-link:hover {
     background-color: #03a9f4;
   }
 }
+
+//
+// Footer
+//
 
 footer {
   text-align: center;

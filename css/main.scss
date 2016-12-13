@@ -3,12 +3,5 @@
 ---
 @charset "utf-8";
 
-// Normalize
-@import 'bootstrap/normalize';
-
-// Bootstrap grid
-@import 'bootstrap-grid/bootstrap-grid';
-
-@import 'baseline/typography';
-
+// V20 stylesheet
 @import 'v20/main';
