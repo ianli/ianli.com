@@ -170,6 +170,7 @@ a.project-link:hover {
 //
 // Next and previous item
 //
+
 .previous-item,
 .next-item {
   color: rgba(0, 0, 0, .33);
@@ -214,6 +215,7 @@ a.project-link:hover {
 //
 // Logo name
 //
+
 .logo-name {
   display: inline-block;
   position: relative;
@@ -228,4 +230,8 @@ a.project-link:hover {
     height: 10%;
     background-color: #03a9f4;
   }
+}
+
+footer {
+  text-align: center;
 }
