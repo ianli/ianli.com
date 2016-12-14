@@ -116,17 +116,21 @@
   padding-left: 24px;
   border-left: 6px solid #2196F3;
 
-  &:before {
+  &::before {
     content: 'Contents';
     display: block;
     @include text-default(16);
     color: #999;
+    padding-bottom: 12px;
   }
 
   a[href] {
     display: block;
     @include text-default(20);
-    @include top-padding-for-text(20, 24px);
+    // Replace the negative margin of text-default.
+    margin: 0;
+    // Replace the line-height of text-default.
+    line-height: 40px;
   }
 }
 
