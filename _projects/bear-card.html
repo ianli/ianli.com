@@ -1,0 +1,170 @@
+---
+title: Bear Card
+date: 2016-12-24
+short: Postcard and website that Beth and I sent to our family and friends during the winter holidays of 2016.
+badge: bear-card_badge.png
+---
+<h1>
+  Bear Card
+</h1>
+
+<p>
+  2016
+</p>
+
+<hr class="space-md">
+
+<div class="row">
+  <div class="col-md-9 col-lg-8">
+    <p>
+      This is the postcard and website that Beth and I sent to our family and friends during the winter holidays of 2016.
+      The card is inspired by the
+      <a href="https://en.wikipedia.org/wiki/I_Love_You,_California">"I Love You, California" Bear</a>
+      and the ever-present gift wrap during the holiday season.
+    </p>
+
+    <hr class="space-md hidden-lg-up">
+  </div>
+
+  <div class="col-xs-12 col-lg-4">
+
+    <p class="larger">
+      <a href="https://ianli.github.io/bear-card/">
+        Visit the website &gt;
+      </a>
+    </p>
+
+    <p class="larger">
+      <a href="https://github.com/ianli/bear-card/">View code on GitHub &gt;</a>
+    </p>
+
+  </div>
+</div>
+
+<hr class="space-lg">
+
+<nav class="content-nav">
+  <a href="#postcard">Postcard</a>
+  <a href="#website">Website</a>
+  <a href="#implementation">Implementation</a>
+</nav>
+
+<hr class="space-lg">
+
+<h2 id="postcard">
+  Postcard
+</h2>
+
+<hr class="space-md">
+
+<div class="row">
+  <div class="col-md-4">
+    <p>
+      We printed 100 postcards and sent them to family and friends during the holidays of 2016.
+    </p>
+
+    <hr class="space-md">
+  </div>
+  <div class="col-md-8">
+    <img src="/images/projects/bear-card_sent.jpg"
+        class="img-responsive img-shadow">
+  </div>
+</div>
+
+<hr class="space-xl">
+
+<h2 id="website">
+  Website
+</h2>
+
+<hr class="space-md">
+
+<div class="row">
+  <div class="col-md-4">
+    <p>
+      The bear card on the website changes colors and patterns every time the user refreshes the page
+      or clicks on the "refresh" button.
+    </p>
+
+    <p>
+      The card is also printable, so you can print your own copy.
+    </p>
+
+    <p>
+      <a href="https://ianli.github.io/bear-card/">
+        Check out the website.
+      </a>
+    </p>
+
+    <hr class="space-md">
+  </div>
+  <div class="col-md-8">
+
+    <div class="row">
+      <div class="col-xs-6">
+        <img src="/images/projects/bear-card_blue.jpg"
+            class="img-responsive img-shadow">
+      </div>
+      <div class="col-xs-6">
+        <img src="/images/projects/bear-card_purple.jpg"
+            class="img-responsive img-shadow">
+      </div>
+    </div>
+
+    <hr class="space-md">
+
+    <div class="row">
+      <div class="col-xs-6">
+        <img src="/images/projects/bear-card_pink.jpg"
+            class="img-responsive img-shadow">
+      </div>
+      <div class="col-xs-6">
+        <img src="/images/projects/bear-card_yellow.jpg"
+            class="img-responsive img-shadow">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<hr class="space-xl">
+
+<h2 id="implementation">
+  Implementation
+</h2>
+
+<hr class="space-md">
+
+<div class="row">
+  <div class="col-md-9 col-lg-8">
+    <p>
+      I drew the postcard using Illustrator.
+    </p>
+
+    <p>
+      I implemented the website using React.
+      I wanted to explore how React can render an SVG image.
+      Since the card on the website is rendered with SVG,
+      the card has the following properties:
+    </p>
+
+    <ul>
+      <li>
+        The card can be downloaded as an SVG file
+        that can be printed in high resolution.
+      </li>
+      <li>
+        The lines of the cards are vector graphics, not raster.
+        This means that at various resolutions the lines will not appear jagged.
+      </li>
+      <li>
+        React and SVG allows the application to dynamically
+        set the patterns and colors of shapes in the card.
+      </li>
+    </ul>
+
+    <p>
+      <a href="http://github.com/ianli/bear-card/">View the code on GitHub</a>.
+    </p>
+  </div>
+</div>
