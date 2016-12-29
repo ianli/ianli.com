@@ -3,8 +3,10 @@ markdown: kramdown
 
 # Don't add these files to the site.
 exclude:
+- deploy.sh
 - Gemfile
 - Gemfile.lock
+- README.md
 - run_jekyll.sh
 
 # Set collections
