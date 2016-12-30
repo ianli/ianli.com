@@ -186,6 +186,32 @@ a.project-link:hover {
 }
 
 //
+// Listing
+//
+
+.listing {
+  @include clearfix();
+}
+
+.listing__link {
+  display: block;
+  float: left;
+  margin: 0;
+  margin-right: 16px;
+
+  > img {
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 2px;
+  }
+}
+
+.listing__link + p {
+  margin-left: 96px;
+}
+
+//
 // Next and previous item
 //
 
