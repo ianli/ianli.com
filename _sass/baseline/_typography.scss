@@ -310,12 +310,21 @@ body {
   }
 
   //
-  // Style
+  // Weight
   //
 
-  b, strong {
+  b, strong,
+  .weight-bold {
     font-weight: bold;
   }
+
+  .weight-normal {
+    font-weight: normal;
+  }
+
+  //
+  // Style
+  //
 
   i:not([class]), em {
     font-style: italic;
