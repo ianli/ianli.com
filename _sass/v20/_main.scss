@@ -162,30 +162,6 @@
 }
 
 //
-// Project link
-//
-
-a.project-link,
-a.project-link:hover {
-  color: inherit;
-  text-decoration: none;
-
-  @include clearfix();
-}
-
-.project-img {
-  float: left;
-  margin-right: 16px;
-  width: 80px;
-  height: 80px;
-  border-radius: 2px;
-}
-
-.project-img + p {
-  margin-left: 96px;
-}
-
-//
 // Listing
 //
 
