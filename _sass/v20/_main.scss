@@ -207,8 +207,19 @@ a.project-link:hover {
   }
 }
 
-.listing__link + p {
-  margin-left: 96px;
+.listing__body {
+  > h5 > a {
+    &:link,
+    &:visited,
+    &:active,
+    &:hover {
+      color: rgba(#000, .87);
+    }
+  }
+
+  .listing__link + & {
+    margin-left: 96px;
+  }
 }
 
 //
