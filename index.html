@@ -57,26 +57,26 @@ layout: default
       {% if project.content != "" %}
         <hr class="space-md">
 
-        <a href="{{ project.url }}"
-            class="project-link">
+        <div class="listing">
+          <a href="{{ project.url }}"
+              class="listing__link">
+            <img src="images/projects/{{ project.badge }}">
+          </a>
+          <div class="text-p listing__body">
+            <h5>
+              <a href="{{ project.url }}">
+                {{ project.title }}
+                <span class="weight-normal color-b3"> / {{ project.date | date:'%Y' }}</span>
+              </a>
+            </h5>
 
-          {% if project.badge %}
-            <img
-                class="project-img"
-                src="/images/projects/{{ project.badge }}">
-          {% endif %}
+            <hr class="space-xs">
 
-          <h5>
-            {{ project.title }}
-            <span class="weight-normal color-b3">/ {{ project.date | date:'%Y' }}</span>
-          </h5>
-
-          <hr class="space-xs">
-
-          <p>
-            {{ project.short }}
-          </p>
-        </a>
+            <p>
+              {{ project.short }}
+            </p>
+          </div>
+        </div>
       {% endif %}
     {% endfor %}
 
@@ -118,12 +118,12 @@ layout: default
     {% for research in site.data.research %}
       <hr class="space-md">
 
-      <div class="research">
+      <div class="listing">
         <a href="/publications/{{ research.pdf }}"
-            class="research__link">
+            class="listing__link">
           <img src="images/phd/{{ research.badge }}">
         </a>
-        <div class="text-p research__body">
+        <div class="text-p listing__body listing__body--padded">
           <h5>
             <a href="/publications/{{ research.pdf }}">
               {{ research.title }}

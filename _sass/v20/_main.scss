@@ -186,16 +186,18 @@ a.project-link:hover {
 }
 
 //
-// Research
+// Listing
 //
 
-.research {
+.listing {
   @include clearfix();
 }
 
-.research__link {
+.listing__link {
   display: block;
+  position: relative;
   float: left;
+  z-index: 1;
   margin: 0;
   margin-right: 16px;
 
@@ -207,7 +209,7 @@ a.project-link:hover {
   }
 }
 
-.research__body {
+.listing__body {
   > h5 > a {
     &:link,
     &:visited,
@@ -217,7 +219,7 @@ a.project-link:hover {
     }
   }
 
-  .research__link + & {
+  &.listing__body--padded {
     margin-left: 96px;
   }
 }
