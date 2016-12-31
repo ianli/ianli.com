@@ -1,0 +1,34 @@
+- year: 2011
+  authors: Ian Li
+  title: "Personal Informatics &amp; Context: Using Context to Reveal Factors that Affect Behavior"
+  meta: "*Carnegie Mellon University* (Doctoral dissertation)"
+  badge: thesis_badge.png
+  pdf: 2011-ianli-dissertation.pdf
+
+- year: 2012
+  authors: Ian Li, Anind K. Dey, Jodi Forlizzi
+  title: Using Context to Reveal Factors that Affect Physical Activity
+  meta: "*ACM Transactions on Computer Human Interaction*, vol. 19(1), pp. 1-21"
+  badge: impact_badge.png
+  pdf: 2012-ianli-tochi-using-context-to-reveal-factors.pdf
+
+- pdf: 2011-ianli-ubicomp-understanding-my-data.pdf
+  badge: phases_badge.png
+  title: "Understanding My Data, Myself: Supporting Self-Reflection with Ubicomp Technologies"
+  year: 2011
+  authors: Ian Li, Anind K. Dey, Jodi Forlizzi
+  meta: "*Ubicomp 2011*, pp. 405-414"
+
+- pdf: 2010-ianli-chi-stage-based-model.pdf
+  badge: stage_badge.png
+  title: "A Stage-Based Model of Personal Informatics Systems"
+  year: 2010
+  authors: Ian Li, Anind K. Dey, Jodi Forlizzi
+  meta: "*CHI 2010*, pp. 557-566"
+
+- pdf: 2010-ianli-chi-actionshot.pdf
+  badge: actionshot_badge.png
+  title: "Here's What I Did: Sharing and Reusing Web Activity with ActionShot"
+  year: 2010
+  authors: Ian Li, Jeffrey Nichols, Tessa Lau, Clemens Drews, and Allen Cypher
+  meta: "*CHI 2010*, pp. 723-732"
