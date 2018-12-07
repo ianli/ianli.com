@@ -52,7 +52,7 @@ layout: default
 <div class="row">
   <div class="col-xs-12">
 
-    {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
+    {% assign projects_by_date = site.projects | sort: 'date' | reverse %}
     {% for project in projects_by_date %}
       {% if project.content != "" %}
         <hr class="space-md">

@@ -23,6 +23,6 @@ defaults:
     values:
       layout: projects
 
-gems:
+plugins:
   - jekyll-redirect-from
   - jekyll-sitemap

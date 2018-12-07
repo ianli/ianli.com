@@ -48,7 +48,7 @@
   {% comment %}
     Order the projects by date in descending order.
   {% endcomment %}
-  {% assign projects_by_date = (site.projects | sort: 'date') | reverse %}
+  {% assign projects_by_date = site.projects | sort: 'date' | reverse %}
   {% for project in projects_by_date %}
     {% if project.path == page.path %}
       {% unless forloop.first %}
